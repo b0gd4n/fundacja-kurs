@@ -106,18 +106,21 @@ form label {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 form input[type=text],
 form input[type=email],
 form textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+    display: block;
+    width: 50%; /* изменено на 50% */
+    max-width: 400px; /* добавлено указание максимальной ширины */
+    margin: 0 auto; /* добавлено центрирование */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 form textarea {
@@ -126,6 +129,7 @@ form textarea {
 
 form button[type=submit] {
   display: block;
+  margin: 0 auto; /* добавлено свойство для выравнивания по центру */
   padding: 10px 20px;
   background-color: #000;
   color: #fff;
@@ -137,7 +141,6 @@ form button[type=submit] {
 
 /* Стили для конкретных элементов */
 #banner {
-  background-image: url(banner.jpg);
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -148,11 +151,13 @@ form button[type=submit] {
 #banner h1 {
   font-size: 60px;
   margin-bottom: 20px;
+  color: #000000;
 }
 
 #banner p {
   font-size: 24px;
   margin-bottom: 40px;
+  color: #000000;
 }
 
 .btn {
@@ -340,38 +345,18 @@ ul li h3 {
     <header>
       <nav>
         <ul>
-          <li><a href="#featured">Featured</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About company</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#testimonials">Customers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <section id="banner">
       <h1>Welcome to Our Landing Page</h1>
+      <img src="picture.png" height="200" width="300">
       <p>Learn more about our products and services below</p>
       <a href="#about" class="btn">Learn More</a>
-    </section>
-    <section id="featured">
-      <h2>Featured Products</h2>
-      <ul>
-        <li>
-          <img src="product1.jpg" alt="Product 1">
-          <h3>Product 1</h3>
-          <p>Description of Product 1</p>
-        </li>
-        <li>
-          <img src="product2.jpg" alt="Product 2">
-          <h3>Product 2</h3>
-          <p>Description of Product 2</p>
-        </li>
-        <li>
-          <img src="product3.jpg" alt="Product 3">
-          <h3>Product 3</h3>
-          <p>Description of Product 3</p>
-        </li>
-      </ul>
     </section>
     <section id="about">
       <h2>About Us</h2>
@@ -395,25 +380,25 @@ ul li h3 {
       </ul>
     </section>
     <section id="testimonials">
-      <h2>Testimonials</h2>
+      <h2>Customers</h2>
       <ul>
         <li>
           <blockquote>
             "I am extremely satisfied with the products and services provided by this company. They exceeded my expectations and delivered exactly what I needed."
           </blockquote>
-          <cite>Jane Doe, CEO of XYZ Company</cite>
+          <cite>Jane Doe, CEO of Google</cite>
         </li>
         <li>
           <blockquote>
             "Their customer service is outstanding. They are always available to answer my questions and provide support whenever I need it."
           </blockquote>
-          <cite>John Smith, Owner of ABC Company</cite>
+          <cite>John Smith, Founder of Staples</cite>
         </li>
       </ul>
     </section>
     <section id="contact">
       <h2>Contact Us</h2>
-      <form>
+      <form action="test.html">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email</label>
@@ -424,7 +409,7 @@ ul li h3 {
       </form>
     </section>
     <footer>
-      <p>&copy; 2021 Our Company. All rights reserved.</p>
+      <p>&copy; 2023 Lead Forwarder MVP. All rights reserved.</p>
     </footer>
   </body>
 </html>
