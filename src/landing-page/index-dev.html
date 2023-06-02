@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+/* Базовые стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+cite {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form input[type=text],
+form input[type=email],
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form button[type=submit] {
+  display: block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Стили для конкретных элементов */
+#banner {
+  background-image: url(banner.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+#banner h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+#banner p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #666;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+#banner h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form button[type=submit]{
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type=submit]:hover{
+  background-color: #666;
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #666;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+#banner .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#banner .btn:hover {
+  background-color: #666;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ul li h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInRight 0.5s ease forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="banner">
+      <h1>Welcome to Our Landing Page</h1>
+      <p>Learn more about our products and services below</p>
+      <a href="#about" class="btn">Learn More</a>
+    </section>
+    <section id="featured">
+      <h2>Featured Products</h2>
+      <ul>
+        <li>
+          <img src="product1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>Description of Product 1</p>
+        </li>
+        <li>
+          <img src="product2.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>Description of Product 2</p>
+        </li>
+        <li>
+          <img src="product3.jpg" alt="Product 3">
+          <h3>Product 3</h3>
+          <p>Description of Product 3</p>
+        </li>
+      </ul>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a company that specializes in providing high quality products and services to our clients. Our team consists of experienced professionals who are dedicated to delivering top-notch solutions to meet your needs.</p>
+    </section>
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>
+          <h3>Service 1</h3>
+          <p>Description of Service 1</p>
+        </li>
+        <li>
+          <h3>Service 2</h3>
+          <p>Description of Service 2</p>
+        </li>
+        <li>
+          <h3>Service 3</h3>
+          <p>Description of Service 3</p>
+        </li>
+      </ul>
+    </section>
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <ul>
+        <li>
+          <blockquote>
+            "I am extremely satisfied with the products and services provided by this company. They exceeded my expectations and delivered exactly what I needed."
+          </blockquote>
+          <cite>Jane Doe, CEO of XYZ Company</cite>
+        </li>
+        <li>
+          <blockquote>
+            "Their customer service is outstanding. They are always available to answer my questions and provide support whenever I need it."
+          </blockquote>
+          <cite>John Smith, Owner of ABC Company</cite>
+        </li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <footer>
+      <p>&copy; 2021 Our Company. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
